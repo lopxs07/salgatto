@@ -82,6 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "color-scheme", content: "only light" },
+      { name: "darkreader-lock", content: "" },
       { title: "Salgatto" },
       { name: "description", content: "Salgados e sucos fresquinhos pra matar a fome!" },
       { property: "og:title", content: "Salgatto" },
