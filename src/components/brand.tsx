@@ -1,4 +1,4 @@
-import brandAsset from '@/assets/salgatto-mark.svg.asset.json';
+const brandAsset = { url: '/salgatto-mark.svg' };
 export type FoodKind = 'burger' | 'coxinha' | 'pizza' | 'juice' | 'manga' | 'abacaxi' | 'goiaba' | 'maracuja';
 export function foodKind(name: string): FoodKind { const n=name.toLowerCase(); if(n.includes('coxinha'))return 'coxinha';if(n.includes('pizza'))return 'pizza';if(n.includes('manga'))return 'manga';if(n.includes('abacaxi'))return 'abacaxi';if(n.includes('goiaba'))return 'goiaba';if(n.includes('maracujá'))return 'maracuja';return n.includes('suco')?'juice':'burger'; }
 export function FoodIcon({kind='burger',className=''}:{kind?:FoodKind;className?:string}) { return <svg className={`food-icon ${className}`} viewBox="0 0 64 64" aria-hidden="true" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">

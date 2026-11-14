@@ -7,7 +7,7 @@ import { Brand, Wave, FoodIcon, foodKind } from '@/components/brand';
 import { Reveal } from '@/components/motion';
 import { productsQuery, productPhoto, money } from '@/lib/encanto';
 import type { Product } from '@/lib/encanto.functions';
-import brandAsset from '@/assets/salgatto-mark.svg.asset.json';
+const brandAsset = { url: '/salgatto-mark.svg' };
 export const Route = createFileRoute('/')({
  head:()=>({meta:[{title:'Salgatto | Cardápio de salgados e sucos'},{name:'description',content:'Coxinha, mini hambúrguer, mini pizza e sucos fresquinhos de 300 mL. Conheça o cardápio da Salgatto.'},{property:'og:title',content:'Salgatto | Cardápio de salgados e sucos'},{property:'og:description',content:'Salgados e sucos fresquinhos pra matar a fome! Confira os sabores e preços.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),
  loader:({context})=>context.queryClient.ensureQueryData(productsQuery),
